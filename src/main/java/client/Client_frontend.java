@@ -16,6 +16,8 @@ import java.io.IOException;
 public class Client_frontend extends Application{
 
     public static void main(String[] args) {
+
+
         Application.launch(args);
     }
 
