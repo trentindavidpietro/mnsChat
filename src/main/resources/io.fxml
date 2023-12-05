@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.beans.property.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.paint.Color?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
 
-<VBox spacing="10" alignment="CENTER" prefWidth="300" prefHeight="300" fx:controller="client.Client_controller" xmlns:fx="http://javafx.com/fxml">
-   <fx:define>
-      <Font fx:id="FONT" size="18" />
-   </fx:define>
+<VBox alignment="CENTER" prefHeight="300" prefWidth="300" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client_controller">
+
 
    <StackPane alignment="CENTER">
-      <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="50" />
-      <Text fx:id="output" font="$FONT" />
+      <Rectangle fill="TRANSPARENT" height="50" stroke="GRAY" width="230" />
+      <Text fx:id="output" />
    </StackPane>
 
-   <HBox spacing="10" alignment="CENTER">
-      <Button text="7" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="8" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="9" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="/" prefWidth="50" font="$FONT" onAction="#processOperator" />
+   <HBox alignment="CENTER" spacing="10">
+      <Button onAction="#processNumpad" prefWidth="50" text="7" />
+      <Button onAction="#processNumpad" prefWidth="50" text="8" />
+      <Button onAction="#processNumpad" prefWidth="50" text="9" />
+      <Button onAction="#processOperator" prefWidth="50" text="/" />
    </HBox>
 
-   <HBox spacing="10" alignment="CENTER">
-      <Button text="4" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="5" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="6" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="*" prefWidth="50" font="$FONT" onAction="#processOperator" />
+   <HBox alignment="CENTER" spacing="10">
+      <Button onAction="#processNumpad" prefWidth="50" text="4" />
+      <Button onAction="#processNumpad" prefWidth="50" text="5" />
+      <Button onAction="#processNumpad" prefWidth="50" text="6" />
+      <Button onAction="#processOperator" prefWidth="50" text="*" />
    </HBox>
 
-   <HBox spacing="10" alignment="CENTER">
-      <Button text="1" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="2" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="3" prefWidth="50" font="$FONT" onAction="#processNumpad" />
-      <Button text="-" prefWidth="50" font="$FONT" onAction="#processOperator" />
+   <HBox alignment="CENTER" spacing="10">
+      <Button onAction="#processNumpad" prefWidth="50" text="1" />
+      <Button onAction="#processNumpad" prefWidth="50" text="2" />
+      <Button onAction="#processNumpad" prefWidth="50" text="3" />
+      <Button onAction="#processOperator" prefWidth="50" text="-" />
    </HBox>
 
-   <HBox spacing="10" alignment="CENTER">
-      <Button text="0" prefWidth="110" font="$FONT" onAction="#processNumpad" />
-      <Button text="=" prefWidth="50" font="$FONT" onAction="#processOperator" />
-      <Button text="+" prefWidth="50" font="$FONT" onAction="#processOperator" />
+   <HBox alignment="CENTER" spacing="10">
+      <Button onAction="#processNumpad" prefWidth="110" text="0" />
+      <Button onAction="#processOperator" prefWidth="50" text="=" />
+      <Button onAction="#processOperator" prefWidth="50" text="+" />
    </HBox>
+   <MFXButton />
+   <MFXSlider />
+   <MFXListView depthLevel="LEVEL4" />
 
 </VBox>
