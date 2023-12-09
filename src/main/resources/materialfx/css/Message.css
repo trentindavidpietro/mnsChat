@@ -1,0 +1,13 @@
+.sent-message {
+    -fx-background-color: #DCF8C6;
+    -fx-padding: 8px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.received-message {
+    -fx-background-color: #EAEAEA;
+    -fx-padding: 8px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}

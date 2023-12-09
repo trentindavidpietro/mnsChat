@@ -3,27 +3,22 @@
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
-<?import java.lang.String?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client_ChatController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@materialfx/css/Message.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client_ChatController">
     <center>
         <MFXScrollPane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <VBox fx:id="chatBox" prefHeight="27.0" prefWidth="483.0" spacing="5.0" />
+            <VBox fx:id="chatBox" prefHeight="27.0" prefWidth="598.0" spacing="5.0" />
         </MFXScrollPane>
     </center>
     <bottom>
         <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <left>
-                <MFXTextField fx:id="messageField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="456.0" BorderPane.alignment="CENTER_LEFT" />
+                <MFXTextField fx:id="messageField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="456.0" styleClass="floating-text" stylesheets="@materialfx/css/MFXTextField.css" BorderPane.alignment="CENTER_LEFT" />
             </left>
             <right>
-                <MFXButton fx:id="sendButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="144.0" stylesheets="@materialfx/css/DefaultTheme.css" text="Send" BorderPane.alignment="CENTER_RIGHT">
-                    <styleClass>
-                        <String fx:value="mfx-button" />
-                        <String fx:value="buttons-box" />
-                    </styleClass></MFXButton>
+                <MFXButton fx:id="sendButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="144.0" styleClass="outline-button" stylesheets="@materialfx/css/Buttons.css" text="Send" BorderPane.alignment="CENTER_RIGHT" />
             </right>
         </BorderPane>
     </bottom>
