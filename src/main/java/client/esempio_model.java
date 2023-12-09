@@ -1,6 +1,6 @@
 package client;
 
-public class Model {
+public class esempio_model {
 
     public long calculate(long number1, long number2, String operator) {
         switch (operator) {
