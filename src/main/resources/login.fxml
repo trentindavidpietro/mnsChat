@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="747.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client_LoginController">
+   <children>
+      <Pane prefHeight="791.0" prefWidth="632.0">
+         <children>
+            <MFXButton layoutX="289.0" layoutY="662.0" styleClass="outline-button" stylesheets="@materialfx/css/Buttons.css" text="Button" />
+            <MFXTextField layoutX="274.0" layoutY="325.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
