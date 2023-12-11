@@ -4,11 +4,21 @@ import io.github.palexdev.materialfx.controls.MFXListView;
 import io.github.palexdev.materialfx.controls.MFXScrollPane;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import static io.github.palexdev.materialfx.controls.MFXListView.*;
 
@@ -24,11 +34,17 @@ public class Client_ChatController {
 
     @FXML
     private MFXButton chatListButton;
-    private MFXListView<String> chatListDrawer;
+
+    private Stage chatListStage;
+
+
+
     @FXML
     public void initialize() {
         // Puoi inizializzare qui il controller, ad esempio aggiungere un'azione al pulsante "Send"
         sendButton.setOnAction(event -> sendMessage());
+        chatListButton.setOnAction(event -> openChatList());
+
 
     }
 private void receiveMessage(){
@@ -90,6 +106,27 @@ private void receiveMessage(){
         return Math.ceil(textHeight / lineHeight) * lineHeight; // Calcola l'altezza basandoti sul numero di righe
     }
 
+    private void openChatList() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/chat_list.fxml"));
+        try {
+            VBox chatListLayout = fxmlLoader.load();
 
-    // Potresti aggiungere altri metodi per gestire ulteriori azioni nella chat
+            // Ottieni il controller se necessario
+            // ChatListController controller = fxmlLoader.getController();
+
+            Stage chatListStage = new Stage();
+            chatListStage.initModality(Modality.APPLICATION_MODAL);
+            chatListStage.setTitle("Elenco Chat");
+
+            Scene chatListScene = new Scene(chatListLayout, 200, 400);
+            chatListStage.setScene(chatListScene);
+            chatListStage.setMaxHeight(400);
+            chatListStage.setMaxWidth(200);
+
+            chatListStage.show();
+        } catch ( IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
