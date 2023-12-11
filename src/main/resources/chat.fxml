@@ -22,4 +22,7 @@
             </right>
         </BorderPane>
     </bottom>
+   <top>
+      <MFXButton fx:id="chatListButton" styleClass="outline-button" stylesheets="@materialfx/css/Buttons.css" text="chat" BorderPane.alignment="CENTER" />
+   </top>
 </BorderPane>
